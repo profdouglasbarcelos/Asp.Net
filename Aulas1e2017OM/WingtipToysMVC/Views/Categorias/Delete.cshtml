@@ -1,0 +1,22 @@
+﻿@model WingtipToysMVC.Models.Categoria
+
+@{
+    ViewBag.Title = "Excluir Categoria";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Você tem certeza que deseja excluir o seguinte item?</h3>
+
+
+@Html.Partial("DetalhesCategoria")
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+    </div>
+}
