@@ -193,6 +193,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\Categorias\Criar.aspx" />
     <Content Include="Views\Categorias\Lista.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -281,6 +282,13 @@
     </Compile>
     <Compile Include="Views\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Categorias\Criar.aspx.cs">
+      <DependentUpon>Criar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Categorias\Criar.aspx.designer.cs">
+      <DependentUpon>Criar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Categorias\Lista.aspx.cs">
       <DependentUpon>Lista.aspx</DependentUpon>

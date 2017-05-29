@@ -15,6 +15,9 @@ namespace Aula2405_EF_MF.Views.Categorias
 
             gvCategorias.DataSource = lista.OrderBy(c => c.Nome);
             gvCategorias.DataBind();
+
+            gvCategoriasExcluidas.DataSource = ctrl.ListarInativos();
+            gvCategoriasExcluidas.DataBind();
         }
     }
 }

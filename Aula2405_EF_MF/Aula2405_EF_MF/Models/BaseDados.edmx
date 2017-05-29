@@ -21,6 +21,7 @@
     <Property Name="Nome" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Descricao" Type="nvarchar(max)" Nullable="true" />
     <Property Name="CategoriaId" Type="int" Nullable="false" />
+    <Property Name="Ativo" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Categorias">
     <Key>
@@ -29,6 +30,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nome" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Descricao" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Ativo" Type="bit" Nullable="false" />
   </EntityType>
   <Association Name="ProdutoCategoria">
     <End Role="Produto" Type="BaseDados.Store.Produtos" Multiplicity="*" />
@@ -63,6 +65,7 @@
           <Property Name="Descricao" Type="String" Nullable="true" MaxLength="Max" />
           <NavigationProperty Name="Categoria" Relationship="BaseDados.ProdutoCategoria" FromRole="Produto" ToRole="Categoria" />
           <Property Name="CategoriaId" Type="Int32" Nullable="false" />
+          <Property Name="Ativo" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Categoria">
           <Key>
@@ -72,6 +75,7 @@
           <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" />
           <Property Name="Descricao" Type="String" Nullable="true" MaxLength="Max" />
           <NavigationProperty Name="Produtos" Relationship="BaseDados.ProdutoCategoria" FromRole="Categoria" ToRole="Produto" />
+          <Property Name="Ativo" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="ProdutoCategoria">
           <End Type="BaseDados.Produto" Role="Produto" Multiplicity="*" />
@@ -98,6 +102,7 @@
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="Descricao" ColumnName="Descricao" />
           <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -107,6 +112,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -19,7 +19,16 @@ namespace Aula2405_EF_MF.Controllers
 
         public List<Categoria> Listar()
         {
-            return contexto.Categorias.ToList();
+            return contexto.Categorias
+                .Where(c => c.Ativo == true)
+                .ToList();
+        }
+
+        public List<Categoria> ListarInativos()
+        {
+            return contexto.Categorias
+                .Where(c => c.Ativo == false)
+                .ToList();
         }
 
         public Categoria BuscarCategoriaPorID(int id)
@@ -27,13 +36,26 @@ namespace Aula2405_EF_MF.Controllers
             return contexto.Categorias.Find(id);
         }
 
+        // Exclusao fisica (apaga o registro do banco)
+        //public void Excluir(Categoria categoria)
+        //{
+        //    contexto.Entry(categoria).State = 
+        //        System.Data.Entity.EntityState.Deleted;
+
+        //    contexto.SaveChanges();
+        //}
+
+            // Exclusao logica (campo Ativo/Inativo)
         public void Excluir(Categoria categoria)
         {
-            contexto.Entry(categoria).State = 
-                System.Data.Entity.EntityState.Deleted;
+            categoria.Ativo = false;
+
+            contexto.Entry(categoria).State =
+                System.Data.Entity.EntityState.Modified;
 
             contexto.SaveChanges();
         }
+
 
         public void Editar(Categoria categoria)
         {
