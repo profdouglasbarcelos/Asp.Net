@@ -1,4 +1,5 @@
-﻿using Aula2505_EF_MF.Models;
+﻿using Aula2505_EF_MF.Controllers;
+using Aula2505_EF_MF.Models;
 using System;
 using System.Linq;
 using System.Web.UI;
@@ -10,16 +11,18 @@ namespace Aula2505_EF_MF.Views.Categorias
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BaseDadosContainer contexto = new BaseDadosContainer();
+            CategoriasController ctrl = new CategoriasController();
 
-            var categorias = contexto.Categorias;
-
-            gvCategorias.DataSource = categorias.ToList();
+            gvCategorias.DataSource = ctrl.Listar();
             gvCategorias.DataBind();
 
+
+
+            // ---- Gerando Alert JS
+
             // sem updatepanel
-            var ID = "Whatever the data is";
-            ClientScript.RegisterStartupScript(this.GetType(), "script", "alert('" + ID + "');", true);
+            //var ID = "Lista carregada com sucesso";
+            //ClientScript.RegisterStartupScript(this.GetType(), "script", "alert('" + ID + "');", true);
 
             // com update panel
             //var ID2 = "Whatever the data is";
