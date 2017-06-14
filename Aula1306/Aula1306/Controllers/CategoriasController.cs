@@ -32,5 +32,19 @@ namespace Aula1306.Controllers
 
             return View(categorias);
         }
+
+        // GET
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        //public ActionResult Create(string testeCampo, FormCollection campos)
+        public ActionResult Create(Categoria categoria)
+        {
+
+            return View(categoria);
+        }
     }
 }
