@@ -5,7 +5,11 @@
 
 <h2>@ViewBag.Title.</h2>
 
-<p class="text-success">@ViewBag.StatusMessage</p>
+<div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    @ViewBag.StatusMessage
+</div>
+
 <div>
     <h4>Change your account settings</h4>
     <hr />
