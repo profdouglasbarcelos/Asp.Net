@@ -251,6 +251,10 @@
     <Content Include="Views\Produtos\Details.cshtml" />
     <Content Include="Views\Produtos\Edit.cshtml" />
     <Content Include="Views\Produtos\Index.cshtml" />
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
