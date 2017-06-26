@@ -18,6 +18,11 @@ namespace Web.Controllers
         // GET: Produtos
         public ActionResult Index()
         {
+            if(User.IsInRole("admin"))
+            {
+
+            }
+
             var produtos = db.Produtos.Include(p => p._Categoria);
             return View(produtos.ToList());
         }

@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Web.Models;
+using System.Web.Security;
 
 namespace Web
 {
@@ -63,6 +64,8 @@ namespace Web
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
+            Roles.CreateRole("Admin");
         }
     }
 }

@@ -10,7 +10,12 @@
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    
+
+    @if (User.IsInRole("admin"))
+    {
+        // so aparece para o admin
+    }
+
     <div class="form-horizontal">
         <h4>Categoria</h4>
         <hr />
