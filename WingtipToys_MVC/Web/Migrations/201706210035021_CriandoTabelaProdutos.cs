@@ -8,7 +8,7 @@ namespace Web.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Produtoes",
+                "dbo.Produtos",
                 c => new
                     {
                         ProdutoID = c.Int(nullable: false, identity: true),
@@ -25,9 +25,9 @@ namespace Web.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Produtoes", "CategoriaID", "dbo.Categorias");
-            DropIndex("dbo.Produtoes", new[] { "CategoriaID" });
-            DropTable("dbo.Produtoes");
+            DropForeignKey("dbo.Produtos", "CategoriaID", "dbo.Categorias");
+            DropIndex("dbo.Produtos", new[] { "CategoriaID" });
+            DropTable("dbo.Produtos");
         }
     }
 }

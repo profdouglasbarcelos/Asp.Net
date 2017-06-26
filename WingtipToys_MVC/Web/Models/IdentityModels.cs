@@ -33,6 +33,6 @@ namespace Web.Models
 
         public DbSet<Categoria> Categorias { get; set; }
 
-        public System.Data.Entity.DbSet<BaseModels.Produto> Produtoes { get; set; }
+        public System.Data.Entity.DbSet<BaseModels.Produto> Produtos { get; set; }
     }
 }
