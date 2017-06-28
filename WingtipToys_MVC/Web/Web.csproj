@@ -208,6 +208,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ProdutosController.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -255,6 +256,7 @@
     <Content Include="Views\Categorias\Details.cshtml" />
     <Content Include="Views\Categorias\Edit.cshtml" />
     <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Views\Produtos\ExibirPorCategoria.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

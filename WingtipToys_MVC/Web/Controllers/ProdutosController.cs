@@ -129,5 +129,34 @@ namespace Web.Controllers
             }
             base.Dispose(disposing);
         }
+
+        
+
+        // Exemplo Dropdownlists em sequencia
+
+        public JsonResult GetProdutosByCategoria(int idCategoria)
+        {
+            var produtos = db.Produtos.Where(p => p.CategoriaID == idCategoria).ToList();
+
+            return Json(produtos, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult ExibirPorCategoria()
+        {
+            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "Nome");
+            ViewBag.ProdutoID = new SelectList(db.Produtos, "ProdutoID", "Nome");
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ExibirPorCategoria(FormCollection campos)
+        {
+            string categoriaID = campos["CategoriaID"];
+            string produtoID = campos["ProdutoID"];
+
+            ViewBag.CategoriaID = new SelectList(db.Categorias, "CategoriaID", "Nome");
+            ViewBag.ProdutoID = new SelectList(db.Produtos, "ProdutoID", "Nome");
+            return View();
+        }
     }
 }
