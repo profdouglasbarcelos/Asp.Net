@@ -10,7 +10,11 @@ Exemplos criados durante as aulas de CSharp.
 * Instalar a [extensão C#](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) no marketplace do Visual Studio Code.
 
 * Criar uma conta no site [GitHub](https://github.com/)
-* Caso precise de ajuda com o Git, verificar neste [link](https://github.com/profdouglasbarcelos/Git).
+* Caso precise de ajuda com o Git, verificar nestes links:
+** [Contributing to Projects with GitHub for Visual Studio](https://github.com/github/VisualStudio/blob/master/docs/contributing/index.md)
+** [Visual Studio Git Integration](https://services.github.com/on-demand/windows/visual-studio)
+
+
 
 ## Branches (separados por turma)
 * [Master](https://github.com/profdouglasbarcelos/CSharp_Aulas), contém somente este Readme.md
@@ -27,3 +31,7 @@ Exemplos criados durante as aulas de CSharp.
 [2a etapa 2017 CIC Manhã](https://github.com/profdouglasbarcelos/Asp.Net_Aulas/tree/2e2017_CICM)
 
 [2a etapa 2017 CIC Noite](https://github.com/profdouglasbarcelos/Asp.Net_Aulas/tree/2e2017_CICN)
+
+## Branch especial: Exemplos Diversos
+
+[Neste branch](https://github.com/profdouglasbarcelos/Asp.Net_Aulas/tree/ExemplosDiversos) você encontrará soluções para dúvidas apresentadas pelos alunos durante as aulas ou coorientações em projetos.
