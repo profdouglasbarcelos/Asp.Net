@@ -1,0 +1,33 @@
+﻿@model IEnumerable<CadastroEntidadesRelacionadas.Models.EntidadeB>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Endereco)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EntidadeBID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EntidadeBID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EntidadeBID })
+        </td>
+    </tr>
+}
+
+</table>
