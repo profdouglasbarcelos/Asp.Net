@@ -26,5 +26,10 @@ namespace MeuPrimeiroProjetoWeb.Controllers
 
             return View();
         }
+
+        public ActionResult Testando()
+        {
+            return View();
+        }
     }
 }
