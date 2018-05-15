@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Lista de Categorias";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@foreach (string categ in ViewBag.MinhasCategorias)
+{
+    <p>@categ</p>
+}
+
