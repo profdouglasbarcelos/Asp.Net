@@ -6,12 +6,31 @@
 
 <h2>@ViewBag.Title</h2>
 
-@foreach (Categoria categ in ViewBag.MinhasCategorias)
-{
-    <p>@categ.CategoriaID</p>
-    <p>@categ.Nome</p>
-    <p>@categ.Ativo</p>
-    <br />
-    <br />
-}
 
+<table>
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Ativo
+        </th>
+    </tr>
+    @foreach (Categoria categ in ViewBag.MinhasCategorias)
+    {
+        <tr>
+            <td>
+                @categ.CategoriaID
+            </td>
+            <td>
+                @categ.Nome
+            </td>
+            <td>
+                @categ.Ativo
+            </td>
+        </tr>
+    }
+</table>
