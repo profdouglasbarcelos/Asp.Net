@@ -35,5 +35,11 @@ namespace Aula1505_MVC1.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Formulario(string nome, string descricao)
+        {
+            return View();
+        }
     }
 }
