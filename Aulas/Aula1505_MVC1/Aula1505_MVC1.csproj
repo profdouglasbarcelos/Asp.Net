@@ -197,6 +197,7 @@
     <Content Include="Views\Categorias\Index.cshtml" />
     <Content Include="Views\Categorias\Formulario.cshtml" />
     <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
