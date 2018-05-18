@@ -41,5 +41,18 @@ namespace Aula1505_MVC1.Controllers
         {
             return View();
         }
+
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Categoria categoria)
+        {
+            return View(categoria);
+        }
+
     }
 }
