@@ -71,6 +71,10 @@ namespace Aula1505_MVC1.Controllers
         [HttpPost]
         public ActionResult Create(Categoria categoria)
         {
+            if (ModelState.IsValid)
+            {
+                // salvar no banco
+            }
             return View(categoria);
         }
 

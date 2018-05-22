@@ -20,6 +20,7 @@
     //Formulario v2 (usando model)
     @Html.DisplayNameFor(m => m.Nome)
     @Html.EditorFor(m => m.Nome)
+    @Html.ValidationMessageFor(m => m.Nome)
     <br />
     <br />
     @Html.DisplayNameFor(m => m.Ativo)
@@ -32,3 +33,7 @@
 
     <input type="submit" value="Salvar" />
 }
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    }
