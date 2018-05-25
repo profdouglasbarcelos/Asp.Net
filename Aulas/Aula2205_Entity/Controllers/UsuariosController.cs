@@ -2,6 +2,7 @@
 using Aula2205_Entity.Models.DAL;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web.Mvc;
 
 namespace Aula2205_Entity.Controllers
@@ -38,6 +39,23 @@ namespace Aula2205_Entity.Controllers
             return View(usuario);
         }
 
+        public ActionResult Details(int? id)
+        {
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
 
+            MeuContexto contexto = new MeuContexto();
+
+            Usuario usu = contexto.Usuarios.Find(id);
+
+            if(usu == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(usu);
+        }
     }
 }
